@@ -1,0 +1,173 @@
+
+* {
+	margin:0;
+	padding:0;
+}
+
+
+
+#init{
+
+    border-bottom:1px solid rgba(128,128,128,0.5);
+
+	border-top: 1px solid rgba(128,128,128,0.5);
+
+}
+
+#separador{
+
+    border-left:0.5px solid rgba(128,128,128,0.5);
+
+	border-right: 0.1px solid rgba(128,128,128,0.5);
+
+}
+
+
+nav{
+    height:58px;
+	background-color:#8165a2;
+	font-family:  DJB Speak Softly;
+	font-size: 1.1em;
+	align-items: center;
+	/*padding-left:30px;*/
+	justify-content: flex-end;
+	
+
+}
+
+
+.menu_bar {
+	display:none;
+}
+
+
+#btn-menu{
+display: none;
+
+}
+
+ nav label{
+
+padding: 5px;
+	cursor: pointer;
+	display:none; 
+	color: white;
+}
+
+
+ .menu ul {
+ 	background-color:#8165a2;
+ 	display: flex;
+ 	list-style:none; 
+ 	justify-content: center;
+ 	text-align: center;
+}
+ 
+  .menu ul ul {
+ 	display:none; 
+}
+
+.menu a {
+	display: block;
+	padding: 15px 15px;
+	text-decoration: none;
+	color: #fff;
+	text-align: center;
+}
+ 
+ .menu a:hover{
+ 	background:blue; 
+
+ }
+
+.menu  a span {
+	margin-left:1px;
+	width: 10px;
+}
+
+.menu ul li:hover ul{
+	display: block;
+	position: absolute;
+}
+
+
+
+
+
+
+#home{
+    background-position: 0px -25px;
+    margin-left:6px;
+}
+
+@media (max-width:740px) {
+
+	nav{
+		/*padding-left: 0px;
+		display: block;*/
+width:100%;
+		height:80%;
+		left:-100%;
+		margin:0;
+		position: fixed;
+	}
+
+	
+
+	 .menu {
+
+	 	left:0;
+	 	width:100%; 
+	 	transform: traslateX(-100%);
+	 	transition: all 0.3s;	 	
+	 }
+
+	 .menu ul {
+	 	display: block;
+	 	background: rgba(0,0,0,0.5);
+	 }
+
+
+	 .menu ul li:hover ul{
+	display: none;
+	position: static;
+	
+}
+
+       .menu a span {
+        position:relative; 
+    	
+          }
+
+     #btn-menu: checked ~.menu{
+    transform: traslateX(0%); 
+}
+
+
+.menu_bar {
+		display:block;
+		width:100%;
+		background:#ccc;
+	}
+ 
+	.menu_bar .bt-menu {
+		display:block;
+		padding:20px;
+		background:#024959;
+		color:#fff;
+		text-decoration:none;
+		font-weight: bold;
+		font-size:15px;
+		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		box-sizing:border-box;
+	}
+ 
+	.menu_bar span {
+		float:right;
+		font-size:40px;
+	}
+
+
+
+}
